@@ -7,10 +7,17 @@ public class Prodotto {
 	private double price;
 	private double iva ;
 	
-	public Prodotto (String name, String desc, double iva) {
+	public Prodotto () {
+		getCode();
+		this.iva = 1.22;
+	}
+	
+	public Prodotto (String name, String desc) {
+		this();
 		name = this.name;
 		desc = this.description;
-		iva = this.price * this.iva;
+		
+		
 		
 	}
 	public void getCode () {
@@ -20,7 +27,7 @@ public class Prodotto {
 	}
 
 	public double getPrice() {
-		return price;
+		return price * iva;
 	}
 
 	public void setPrice(double price) {
